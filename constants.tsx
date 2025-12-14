@@ -33,15 +33,15 @@ export const PROFILE: Profile = {
 };
 
 export const TIMELINE_EVENTS: TimelineEvent[] = [
-  { date: "2021.04", icon: School, category: "education", label: "高校入学" },
-  { date: "2023.07", icon: Trophy, category: "other", label: "野球部引退" },
-  { date: "2024.03", icon: GraduationCap, category: "education", label: "高校卒業" },
-  { date: "2024.04", icon: School, category: "education", label: "大学入学" },
-  { date: "2024.05", icon: Briefcase, category: "work", label: "ロフト開始" },
-  { date: "2025.04", icon: Users, category: "other", label: "芝ラボ入部" },
-  { date: "2025.04", icon: Zap, category: "education", label: "基本情報合格" },
-  { date: "2025.09", icon: Briefcase, category: "work", label: "ロフト退職" },
-  { date: "2025.09", icon: Cpu, category: "work", label: "AIインターン開始" },
+  { date: "2021.04", icon: School, category: "education", label: "千葉県立柏南高校 入学" },
+  { date: "2023.07", icon: Trophy, category: "other", label: "柏南高校野球部 引退" },
+  { date: "2024.03", icon: GraduationCap, category: "education", label: "千葉県立柏南高校 卒業" },
+  { date: "2024.04", icon: School, category: "education", label: "芝浦工業大学工学部情報通信コース 入学" },
+  { date: "2024.05", icon: Briefcase, category: "work", label: "株式会社ロフト アルバイト開始" },
+  { date: "2025.04", icon: Users, category: "other", label: "サークル「芝ラボ」入部" },
+  { date: "2025.04", icon: Zap, category: "education", label: "基本情報技術者試験 合格" },
+  { date: "2025.09", icon: Briefcase, category: "work", label: "株式会社ロフト 退職" },
+  { date: "2025.09", icon: Cpu, category: "work", label: "光通信 AIエンジニア インターン開始" },
 ];
 
 export const HIGHSCHOOL_CONTENT = {

@@ -8,7 +8,7 @@ const Timeline: React.FC = () => {
       {/* Vertical Line */}
       <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-transparent via-accent-blue to-transparent opacity-30" />
 
-      <div className="space-y-24 w-full max-w-4xl relative z-10">
+      <div className="space-y-24 w-full max-w-5xl relative z-10">
         {TIMELINE_EVENTS.map((event, index) => {
           const isEven = index % 2 === 0;
           return (
@@ -35,10 +35,18 @@ const Timeline: React.FC = () => {
                 </div>
               </div>
 
-              {/* Icon Side */}
+              {/* Icon & Text Side */}
               <div className={`w-1/2 flex ${isEven ? 'justify-start pl-8' : 'justify-end pr-8'}`}>
-                <div className="p-4 rounded-2xl bg-glass backdrop-blur-md border border-glass-border shadow-lg transform hover:scale-105 transition-all duration-300 group">
-                  <event.icon className="w-8 h-8 text-white group-hover:text-accent-blue transition-colors" />
+                <div 
+                  className={`
+                    p-4 rounded-2xl bg-glass backdrop-blur-md border border-glass-border shadow-lg 
+                    transform hover:scale-105 transition-all duration-300 group 
+                    flex items-center gap-4
+                    ${!isEven ? 'flex-row-reverse text-right' : 'flex-row text-left'}
+                  `}
+                >
+                  <event.icon className="w-8 h-8 text-white group-hover:text-accent-blue transition-colors shrink-0" />
+                  <span className="text-slate-200 font-medium md:text-lg">{event.label}</span>
                 </div>
               </div>
             </motion.div>
