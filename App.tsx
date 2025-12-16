@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Github, 
-  Linkedin, 
+  Instagram, 
   Mail, 
   ChevronDown, 
   ExternalLink,
@@ -52,12 +52,14 @@ function App() {
           className="z-10"
         >
           <h2 className="text-accent-blue font-mono mb-4 text-lg">AI Engineer / Student</h2>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-slate-400">
-            {PROFILE.romaji.toUpperCase()}
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight mb-2 bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-slate-400">
+            MY PORTFOLIO
           </h1>
+          <p className="text-xl md:text-2xl text-slate-300 font-light tracking-[0.2em] mb-8 uppercase">
+            {PROFILE.romaji}
+          </p>
           <p className="text-slate-400 max-w-lg mx-auto text-lg leading-relaxed">
-            芝浦工業大学 情報通信コース所属。<br />
-            技術で人々の生活をアップデートするエンジニアへ。
+            芝浦工業大学 情報通信コース所属。
           </p>
         </motion.div>
 
@@ -73,7 +75,7 @@ function App() {
       <main className="container mx-auto px-4 md:px-8 max-w-6xl space-y-32 mb-20">
         
         {/* Profile Grid */}
-        <Section id="about">
+        <Section id="about" className="scroll-mt-28">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h3 className="text-3xl font-bold border-l-4 border-accent-blue pl-4">ABOUT ME</h3>
@@ -84,7 +86,7 @@ function App() {
                 </div>
                 <div className="flex justify-between border-b border-slate-700 pb-2">
                   <span className="text-slate-400">Age</span>
-                  <span className="font-medium">2005.09.28 (19)</span>
+                  <span className="font-medium">2005.09.28 (20)</span>
                 </div>
                 <div className="flex justify-between border-b border-slate-700 pb-2">
                   <span className="text-slate-400">From</span>
@@ -119,7 +121,7 @@ function App() {
         </Section>
 
         {/* Timeline */}
-        <Section id="timeline" className="text-center">
+        <Section id="timeline" className="text-center scroll-mt-28">
           <h3 className="text-4xl font-black mb-16 text-transparent bg-clip-text bg-gradient-to-r from-accent-blue to-white inline-block">
             HISTORY
           </h3>
@@ -174,14 +176,23 @@ function App() {
         </Section>
 
         {/* Works & Projects */}
-        <Section id="works">
+        <Section id="works" className="scroll-mt-28">
           <h3 className="text-3xl font-bold mb-12 border-l-4 border-accent-blue pl-4">WORKS & PROJECTS</h3>
           
           <div className="space-y-16">
             {/* Circle Projects */}
             <div>
               <h4 className="text-xl text-slate-400 mb-6 flex items-center gap-2">
-                <span className="w-8 h-[1px] bg-slate-400"></span> Circle Activity (芝ラボ)
+                <span className="w-8 h-[1px] bg-slate-400"></span> Circle Activity (
+                <a 
+                  href="https://shibalab.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-accent-blue hover:text-white transition-colors hover:underline decoration-1 underline-offset-4 flex items-center gap-1"
+                >
+                  ShibaLab <ExternalLink size={16} />
+                </a>
+                )
               </h4>
               <div className="grid md:grid-cols-3 gap-6">
                 {CIRCLE_PROJECTS.map((project, i) => (
@@ -255,16 +266,32 @@ function App() {
         </Section>
 
         {/* Footer/Contact */}
-        <footer id="contact" className="py-20 text-center border-t border-slate-800">
+        <footer id="contact" className="py-20 text-center border-t border-slate-800 scroll-mt-28">
           <h2 className="text-5xl font-bold mb-8 text-white tracking-tight">Let's Connect</h2>
           <div className="flex justify-center gap-8 mb-12">
-            <a href="#" className="p-4 bg-slate-800 rounded-full hover:bg-accent-blue hover:text-white transition-all duration-300 transform hover:-translate-y-1">
+            <a 
+              href="https://github.com/xxyxxw" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-4 bg-slate-800 rounded-full hover:bg-accent-blue hover:text-white transition-all duration-300 transform hover:-translate-y-1"
+              aria-label="GitHub"
+            >
               <Github size={24} />
             </a>
-            <a href="#" className="p-4 bg-slate-800 rounded-full hover:bg-accent-blue hover:text-white transition-all duration-300 transform hover:-translate-y-1">
-              <Linkedin size={24} />
+            <a 
+              href="https://www.instagram.com/yy_yw63/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-4 bg-slate-800 rounded-full hover:bg-accent-blue hover:text-white transition-all duration-300 transform hover:-translate-y-1"
+              aria-label="Instagram"
+            >
+              <Instagram size={24} />
             </a>
-            <a href="mailto:contact@example.com" className="p-4 bg-slate-800 rounded-full hover:bg-accent-blue hover:text-white transition-all duration-300 transform hover:-translate-y-1">
+            <a 
+              href="mailto:w.yuto928@gmail.com" 
+              className="p-4 bg-slate-800 rounded-full hover:bg-accent-blue hover:text-white transition-all duration-300 transform hover:-translate-y-1"
+              aria-label="Email"
+            >
               <Mail size={24} />
             </a>
           </div>
